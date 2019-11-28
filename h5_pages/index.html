@@ -1,0 +1,1899 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>《红莲之王》--精英测试专题站</title>
+    <!--禁止了把数字转化为拨号链接-->
+    <meta name="format-detection" content="telephone=no">
+    <!--删除默认的苹果工具栏和菜单栏-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--控制状态栏显示样式-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/h5_reset.css"/>
+    <link rel="stylesheet" href="css/swiper-3.2.7.min.css" />
+    <link rel="stylesheet" href="css/h5_globe.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/swiper-3.4.0.jquery.min.js" ></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(function(){
+            /*字号rem尺寸变化代码 750的设计稿  比例1:100*/
+            $(window).load(function(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px';
+                $(function() {
+                    function setCurrentSlide(ele, index) {
+                        $(".swiper1 .swiper-slide").removeClass("selected");
+                        ele.addClass("selected");
+                    }
+                    var swiper1 = new Swiper('.swiper1', {
+                        slidesPerView:4.5,
+                        paginationClickable: true,
+                        spaceBetween:10,
+                        freeMode: true,
+                        loop: false,
+                        onTab: function(swiper) {
+                            var n = swiper1.clickedIndex;
+                        }
+                    });
+                    swiper1.slides.each(function(index, val) {
+                        var ele = $(this);
+                        ele.on("click", function() {
+                            setCurrentSlide(ele, index);
+                            swiper2.slideTo(index, 500, false);
+                        });
+                    });
+
+                    var swiper2 = new Swiper('.swiper2', {
+                        direction: 'horizontal',
+                        loop: false,
+//                      effect : 'fade',
+//                      effect : 'cube',
+                      effect : 'coverflow',//3D流
+//                      effect : 'flip',//3D翻转
+                        autoHeight: true,
+                        onSlideChangeEnd: function(swiper) {
+                            var n = swiper.activeIndex;
+                            setCurrentSlide($(".swiper1 .swiper-slide").eq(n), n);
+                            swiper1.slideTo(n, 500, false);
+                        }
+                    });
+                });
+            });
+            $(window).resize(function(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px'
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="page">
+        <div class="m_header">
+            <div class="btn_bg">
+                <a href="javascript:;" class="apply"></a>
+                <a href="javascript:;" class="aggregate wait_soon_btn"></a>
+            </div>
+            <div class="nav">
+                <div class="swiper-container swiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide nav1 selected"><i></i></div>
+                        <div class="swiper-slide nav2"><i></i></div>
+                        <div class="swiper-slide nav3"><i></i></div>
+                        <div class="swiper-slide nav4"><i></i></div>
+                        <div class="swiper-slide nav5"><i></i></div>
+                        <div class="swiper-slide nav6"><i></i></div>
+                        <div class="swiper-slide nav7"><i></i></div>
+                        <div class="swiper-slide nav8"><i></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="swiper-container swiper2">
+                <div class="swiper-wrapper">
+                    <!--page1-->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="common_box">
+                            <div class="title title1"></div>
+                            <div class="dot_hr"></div>
+                            <div class="box_top"></div>
+                            <div class="box_content">
+                                <img src="./images/in_page/example.jpg"/>
+                                <p class="mb_20">升星系统可以消耗使魔碎片，强化玩家的使魔。通过升星提升使魔各项基础数值，运用得当可搭配出更适合自己的使魔组合，让您在战场中具备更强的变化性。</p>
+                                <p>使魔初始星级为1星。</p>
+                                <p class="mb_20">最大可升至5星。</p>
+                                <p>本次测试中碎片的获得途径：</p>
+                                <p>任务奖励</p>
+                                <p>活动奖励</p>
+                                <p>开启卡包</p>
+                                <p>对局掉落</p>
+                            </div>
+                            <div class="box_bottom"></div>
+                            <a href="#" class="more" title="更多详情"></a>
+                        </div>
+                    </div>
+                    <!--page2-->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="common_box">
+                            <div class="title title2"></div>
+                            <div class="dot_hr"></div>
+                            <div class="box_top"></div>
+                            <div class="box_content">
+                                <img src="./images/in_page/example.jpg"/>
+                                <p>觉得卡牌种类太多，挑选起来眼花缭乱？</p>
+                                <p>别担心，本次测试中，【配置卡组】界面中新增了【自动配卡】的功能。</p>
+                                <p>只要选择一种卡组倾向（坦克、法师、射手、辅助等），系统将从【已拥有】的使魔中自动生成一套对应倾向的组合，为您的搭配提供建议。</p>
+                            </div>
+                            <div class="box_bottom"></div>
+                            <a href="#" class="more" title="更多详情"></a>
+                        </div>
+                    </div>
+                    <!--page3-->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="common_box">
+                            <div class="title title3"></div>
+                            <div class="dot_hr"></div>
+                            <div class="box_top"></div>
+                            <div class="box_content">
+                                <img src="./images/in_page/example.jpg"/>
+                                <p>本次测试还将开放【匹配模式】。</p>
+                                <p>在匹配模式下，系统将自动筛选与您实力接近的玩家，组成两边各5名的对局。</p>
+                                <p>告别游戏开始后发现人员未齐，被迫参与少人局的情况。</p>
+                            </div>
+                            <div class="box_bottom"></div>
+                            <a href="#" class="more" title="更多详情"></a>
+                        </div>
+                    </div>
+                    <!--page4-->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="common_box">
+                            <div class="title title4"></div>
+                            <div class="dot_hr"></div>
+                            <div class="box_top"></div>
+                            <div class="box_content">
+                                <img src="./images/in_page/example.jpg"/>
+                                <p>新增了一种卡牌品阶：Special （SP）</p>
+                                <p>此品阶的卡牌将区别于其他已有卡牌品阶，有着独立的绿色卡牌框体。</p>
+                                <p class="mb_20">将特定的SP品阶卡牌组合使用时，可以获得数值加成、技能增强等中的一种或多种效果。</p>
+                                <p>※首测已实装的一些使魔卡牌也进行了品阶调整。</p>
+                            </div>
+                            <div class="box_bottom"></div>
+                            <a href="#" class="more" title="更多详情"></a>
+                        </div>
+                    </div>
+                    <!--page5-->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="common_box">
+                            <div class="title title5"></div>
+                            <div class="dot_hr"></div>
+                            <div class="box_top"></div>
+                            <div class="box_content">
+                                <img src="./images/in_page/example.jpg"/>
+                                <p>除了以上这些与游戏内容息息相关的全新系统，本次测试还追加了一个娱乐性的系统——弹幕系统。</p>
+                                <p>在大厅中发送聊天信息，即可化为弹幕发出来。尽情与其他玩家交流和吐槽吧！</p>
+                            </div>
+                            <div class="box_bottom"></div>
+                            <a href="#" class="more" title="更多详情"></a>
+                        </div>
+                    </div>
+                    <!--page6-->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="common_box">
+                            <div class="title title6"></div>
+                            <div class="dot_hr"></div>
+                            <div class="box_top"></div>
+                            <div class="box_content">
+                                <ul class="people_sm">
+                                    <li class="sm1 active"></li>
+                                    <li class="sm2"></li>
+                                    <li class="sm3"></li>
+                                    <li class="sm4"></li>
+                                    <li class="sm5"></li>
+                                    <li class="sm6"></li>
+                                    <li class="sm7"></li>
+                                    <li class="sm8"></li>
+                                    <li class="sm9"></li>
+                                    <li class="sm10"></li>
+                                    <li class="sm11"></li>
+                                    <li class="sm12"></li>
+                                    <li class="sm13"></li>
+                                    <li class="sm14"></li>
+                                    <li class="sm15"></li>
+                                </ul>
+                                <div class="sm_content">
+                                    <!--1-->
+                                    <div style="display: block">
+                                        <div class="sm_name sm_name1"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people1.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>它是有着令人畏惧的威严容貌的机械怪物。</p>
+                                                <p>就连自认熟知我们世界的异端科学的我，也无法再现这能做出有机动作的关节构造、从全身喷出苍蓝火焰的动力源、以及如此坚固的装甲材质——就连想都无法想象。</p>
+                                                <p>有一种假说，说巴罗格的设计并没有参照特定的假想敌来决定其尺寸和武装。</p>
+                                                <p>也许制作它的文明认为，能最有效地进行“破坏”的形态就是它现在的样子吧。到底是谁创造了这个暴虐与杀戮的野兽呢，又到底是谁将这头野兽当成兵器在使用呢。想抓住这答案如同云中探物。但恐怕他们会是我们所有人的敌人吧。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--2-->
+                                    <div>
+                                        <div class="sm_name sm_name2"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people2.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>她还是一个年幼的亚马逊女战士。</p>
+                                                <p>为了寻找在某天突然失踪的父母而踏上了冒险之旅。</p>
+                                                <p>在旅途中，她的周围总是围绕着很多“朋友”。国王、恶魔、异性的怪物…乍一看和她并没有什么联系的存在，都跨越了种族聚集在一起的景象，在某种意义上可以说是非常异常的光景了。但是，在她那与生俱来的亲近感和纯洁之心前，种族的屏障什么的也就没有关系了呢。如果世界上尽是像她这样的人的话，那世界应该会更加和平了吧。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--3-->
+                                    <div>
+                                        <div class="sm_name sm_name3"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people3.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>她是使用双月剑的干练的暗杀者……从前，她被自己所属的暗杀者行会夺走了记忆和名字，作为无名的暗杀者杀害了很多人。但是她最终还是找回了失去的记忆，取回了自己真正的名字“丽塔·帕缇丝”。她希望能再次见到有着红色眼睛的前“雇主”，但无论是从我的记录中，还是从古文献中，都找不到她投身的“战斗”的详细信息。难道她也是从其他世界而来的存在吗……？</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--4-->
+                                    <div>
+                                        <div class="sm_name sm_name4"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people4.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>希巴鲁巴是指死者的一种形态，或是他们所居住的一种地狱。</p>
+                                                <p>他们会观察居住于地面之上的人类的行为，如果人类做了坏事，他们会觉得做坏事的人与自己是同类，而将他拉进自己的国家，最终把他变成和希巴鲁巴们一样的存在。</p>
+                                                <p>这国家是“恶人的由恶人创造的为恶人而存在的世界”，越是邪恶的人，身体就越大，力量也就越强，并且会得到越多同胞的敬意，进而引领他人行恶。</p>
+                                                <p>他们的国家是“善”人一刻都待不下去的地狱，但对于与“恶”相衬的人来说，则是接近天国一般的极乐之地。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--5-->
+                                    <div>
+                                        <div class="sm_name sm_name5"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people5.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>所谓芭芭·雅嘉，是某魔女一族代代相传的“冬之魔女”的伟大名字。</p>
+                                                <p>历代的芭芭·雅嘉，在冰雪包围的土地上被当成神，也被当成恶魔而为人所畏惧。现在继承芭芭·雅嘉这个名号的就是她，她也有着与先辈们一样的强大魔力。但是，可能是因为她继承名号的时日还不长，或者是她本身性格的缘故，所以她的威严感很弱，好像被一起旅行的同伴轻视着。但是，就算没有什么威严感，她与被周围人恐惧而躲避着的先辈们不同，有着很多的同伴。这一点可能会在她成为真正意义上的伟大魔女的成长道路上帮她大忙。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--6-->
+                                    <div>
+                                        <div class="sm_name sm_name6"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people6.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>背德者犹大的名字被作为“背叛者”留在了我们的历史上。但是，这个称呼真的与她相称吗。犹大给予曾经的亦师亦友之人以“死之吻”。凭此她被判定有罪，坠入了地狱，但是她的行为却将友人扶上了神坛，引导这个世界向她所相信的方向前进。也就是说，她牺牲了自己，贯彻了崇高的信念。我对将此表现为“背叛”的做法有些疑问。坠入地狱的她，接收了严格的惩戒，感知到“颠覆世界的意志”，为了给予那个人“死之吻”，再次提起剑，背负“背叛者”之名，向地表进发。应该如何说她呢…对了，称她为“持有信念之人”或许更加贴切吧。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--7-->
+                                    <div>
+                                        <div class="sm_name sm_name7"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people7.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>拉斯普廷是服侍宫廷的祈祷僧。通过神秘的祈祷，他能驱除所有疾病、不幸与不安，给予人们至高无上的幸福。他获得了宫廷中的人们的支持，特别是女性。</p>
+                                                <p>关于实际每天在进行着怎样的祈祷，并没有详细的数据。但是接受他的祈祷的女性，无一例外的都被他魅惑了。他平日挥舞的“锡杖”在他的祈祷中一定发挥了相当重要的作用。</p>
+                                                <p>因为他虏获了宫廷中的女性，宫廷中的男性觉得他十分可疑，并疏远了他。他那把能控制女性精神的锡杖，究竟配备了怎样的能量装置呢…这点真让人十分感兴趣。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--8-->
+                                    <div>
+                                        <div class="sm_name sm_name8"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people8.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>当阿波卡利普特还被成为“地球”时，一系列古代神话体系中，作为冥界神妻子的就是她了，泊尔塞福涅。</p>
+                                                <p>她集结了自己的部下，企图颠覆夫君的王权，像是一个生性凶猛的女神。</p>
+                                                <p>在人类世界中，有着各种各样的夫妇关系，但是像她这样的矛盾行为是非常没有效率的，作为机械生命体的我是非常难以理解的。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--9-->
+                                    <div>
+                                        <div class="sm_name sm_name9"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people9.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>它原本是那位战女神所持有的无敌不坏之盾……一定发生了什么吧。</p>
+                                                <p>嘛，有像我这样的例子，还有我的大前辈羽羽斩大人所率领的五影剑那样的情况，一面盾牌像这样以自己的意志行动的话，也就没什么不可思议了吧…</p>
+                                                <p>为了被主人使用而生的武器防具，不由主人使用而单独作战……对于我们所抱有的这种矛盾，同样作为拥有自我意志的武器的我，很想问问圣盾殿下是怎么考虑的。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--10-->
+                                    <div>
+                                        <div class="sm_name sm_name10"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people10.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>从她背着的袋子里会喷出狂风，她是与雷神成对的一位神灵。</p>
+                                                <p>本来，风这种东西吹起来是自由自在、随心所欲的，但在雷电交加的日子里，风会吹得格外强烈。果然，当风神与作为搭档的雷神大人在一起时，就会显得更加活跃了。</p>
+                                                <p>要说风神大人的性格也像风一样的话…那也是很强的暴风了。如果有人要加害她的搭档——雷神大人的话，那可就真所谓巨大风暴一般了。</p>
+                                                <p>我自己对她也很是崇拜。</p>
+                                                <p>风神大人刮起大风时，若像要斩开迎面吹来的风一样挥舞利刃的话，在发出短促笛声一样的声音的同时，会产生试刀那样的美妙手感，让我非常愉悦。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--11-->
+                                    <div>
+                                        <div class="sm_name sm_name11"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people11.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>据说是他是总能比敌人更快拔出枪，更快按动扳机的快枪手。他手持被称为“恶魔之左”的魔枪，还驾驶着一辆不知疲倦的机械马车。看着他的形象，称他是“天真无邪的死神”就再恰当不过了。</p>
+                                                <p>与童颜不符的是，他其实是一个臭名远扬的法外枪手。作为赏金猎人，在毫不留情地猎杀恶徒的同时，自己也是作为强盗和杀手的无法者。我是绝对不想与他为敌的……只能祈祷不会和他发生利害冲突了。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--12-->
+                                    <div>
+                                        <div class="sm_name sm_name12"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people12.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>她有着很多只手，每只手中都握着各种各样不同的武器。是有着“一骑当千”、“万夫不当”、“国士无双”等等名号的有名的魔神喵。</p>
+                                                <p>据说世间所有的兵器都是由蚩尤发明的，不管被多少人攻击，都会被她那压倒性的兵器之力所弹开喵。</p>
+                                                <p>但是，这位魔神大人虽然在战场上擅长正面突破，能发挥出无与伦比的战斗能力，但是却不太精通战略和计谋喵。</p>
+                                                <p>嘛，拥有如此强大的武力的话，也就无需什么计谋了喵。</p>
+                                                <p>因为无论面对什么样的敌人都能嘭~咚~的两三下就解决了喵。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--13-->
+                                    <div>
+                                        <div class="sm_name sm_name13"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people13.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>从曾存在于这个世界上的名叫马其顿的王国，超越时空而在这个世界上现身的王，就是他了。</p>
+                                                <p>在原来的世界中，他好像率领军队东征西讨，建立了一个强大的王国。用威风堂堂形容他是再合适不过了，是个在霸道上勇往直前的人物。另外，他还很关心部下，因此部下们都非常仰慕他。来到这个世界后，他第一个遇见的是那个亚马逊女战士。虽然他的言行举止的威严感不同于常人，但是对于过于单纯的亚马逊女战士的反应，好像也有点不知所措。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--14-->
+                                    <div>
+                                        <div class="sm_name sm_name14"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people14.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>他统帅着“主”的膝下的天使大军，是一个有着白皙皮肤的壮汉，最上级的炽天使大人。</p>
+                                                <p>有传言说只有他的耳目能捕捉神的身影和听到神的声音。因此，他的所言所语是唯一能够传达“主”的话语的“天命”。</p>
+                                                <p>侍奉“主”的天使们都遵从他的命令，保护着信徒，防止他们受到邪恶的迫害…</p>
+                                                <p>但“主”的性格似乎有点过激，由米迦勒大人所代为执行的天罚，经常招致极其凄惨的结局。</p>
+                                                <p>甚至于为了斩人而生的我看到了都不禁颤抖，背后发凉。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--15-->
+                                    <div>
+                                        <div class="sm_name sm_name15"></div>
+                                        <div class="sm_left">
+                                            <img src="images/sm/sm_people15.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="sm_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>她与同族的摩尔莫一样，作为女神黑卡蒂的侍从，是令人战栗的女性吸血鬼。</p>
+                                                <p>她也是接到了前往外界修炼的命令，与摩尔莫两人一组，被送到了地上世界。她本人好像还是无法理解接到这样的命令的原因。</p>
+                                                <p>在我开来，她作为有淫魔一面的吸血鬼，是不是对糖衣炮弹太没有免疫力了呢。</p>
+                                                <p>难得拥有对异性富有吸引力的匀称肉体，要是再多一些手段的话……啊，你看，稍微表扬一下就用包着金属护甲的右脚踢过来了。我要是普通人就被你踢死了啊。外壳会凹下去的，快住手啦。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box_bottom"></div>
+                        </div>
+                    </div>
+                    <!--page7-->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="common_box">
+                            <div class="title title7"></div>
+                            <div class="dot_hr"></div>
+                            <div class="box_top"></div>
+                            <div class="box_content">
+                                <ul class="people_kyz">
+                                    <li class="kyz1 active"></li>
+                                    <li class="kyz2"></li>
+                                    <li class="kyz3"></li>
+                                    <li class="kyz4"></li>
+                                    <li class="kyz5"></li>
+                                    <li class="kyz6"></li>
+                                </ul>
+                                <div class="kyz_content">
+                                    <!--1-->
+                                    <div style="display: block">
+                                        <div class="kyz_name kyz_name1"></div>
+                                        <div class="kyz_left">
+                                            <img src="images/kyz/kyz_people1.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="kyz_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>斯塔林是一个机智聪明的发明少年，也是一名刻印者。在被机械帝国支配的黄铜世界，以自己的力量顽强地对抗着帝国。</p>
+                                                <p>斯塔林有着家族惨遭帝国灭门，只有他幸存下来的悲惨过去。虽然他看起来还只是个软弱无力的少年，但他的内心中始终燃烧着对帝国的仇恨怒火，复仇的想法陪伴着他度过了每一个夜晚。</p>
+                                                <p>但是，实际上斯塔林是作为黄铜之王生物脑的捐献者而被创造出来的存在。黄铜之王成为机械体已有两百多年了，但作为其本体的生物脑却像其他有机生命体一样，逃不过老化的命运。而斯塔林则是通过黄铜之王仍为肉身时遗留下来的冷冻精子进行人工授精而诞生出来的孩子，在遗传学角度上，可以说是黄铜之王的孩子。黄铜之王计划将斯塔林的大脑抽出，对其进行记忆操作后挪为己用。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--2-->
+                                    <div>
+                                        <div class="kyz_name kyz_name2"></div>
+                                        <div class="kyz_left">
+                                            <img src="images/kyz/kyz_people2.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="kyz_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>焰华虽然看起来只是一个普通高中女生，但她其实是以人造阿卡纳为生命根源，有着与红莲之王相似力量的“红莲公主”。</p>
+                                                <p>她出生于黄昏世界的安全装置。伴随重大责任而出生并被养育成人的她，性格上却稍稍有些懒散悠闲，人缘也非常好。</p>
+                                                <p>在自身成长的同时，说出了“想要成为偶像”这样非常符合黄昏世界文化的话，而且事实上她也确实成为了一名偶像。</p>
+                                                <p>她非常热爱黄昏世界，只要她还存在，黄昏世界就将得以维持。在充分理解自己被创造出来的目的，以及自身的能力的情况下，她成了享乐主义的体质。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--3-->
+                                    <div>
+                                        <div class="kyz_name kyz_name3"></div>
+                                        <div class="kyz_left">
+                                            <img src="images/kyz/kyz_people3.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="kyz_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>克鲁普拥有天籁般的声音，小时候的梦想是成为一名歌手。</p>
+                                                <p>因为卷入了一场刻印者之间战斗，克鲁普收到严重的伤害。在临死关头，克鲁普被改造成了半人半机械的杀手刻印者，失去了悲伤的能力。</p>
+                                                <p>尽管如此，克鲁普依然保持着想要成为歌手的本心。一边保持着积极欢愉的心态，一边执行者冷酷的杀人任务。在鲜血和残肢中歌唱……歌唱……</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--4-->
+                                    <div>
+                                        <div class="kyz_name kyz_name4"></div>
+                                        <div class="kyz_left">
+                                            <img src="images/kyz/kyz_people4.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="kyz_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>机械帝国.帝都守备师团的指挥官安妮霍尔。</p>
+                                                <p>本就是枪械制造名家的孙女，通过改造武器发明了双炮连续射击的绝技。</p>
+                                                <p>作为一名刻印者，同时又是帝国军官，拥有高超的作战技巧。</p>
+                                                <p>因为身材火辣拥有大批粉丝，据说有下级军士中专门组建了后援团。</p>
+                                                <p>因为不认同建制派对人民群众的血型镇压，安妮霍尔果断的加入年轻的少壮派军官团并凭着超高的人气成为中坚人物。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--5-->
+                                    <div>
+                                        <div class="kyz_name kyz_name5"></div>
+                                        <div class="kyz_left">
+                                            <img src="images/kyz/kyz_people5.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="kyz_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>红莲世界的刻印者尼沙雅，出生自有狂血基因的魔剑豪家族。因为家族传承自幼修习战斗技巧，拥有超越普通战士的作战能力。常用的武器是剑和盾，战斗中攻守兼备。</p>
+                                                <p>在年纪很小的时候就有了“天才”的称号。14岁学成，至今未尝一败。唯一的一场平局是在17岁那年同自己的兄长对阵。</p>
+                                                <p>因为父亲病故，兄长又生性懒散不愿继承家业而成为家族首领。</p>
+                                                <p>唯一的执念应该就是有自己那个不争气的兄长了，明明天赋很高，却不刻苦追求剑道。</p>
+                                                <p>怎样刺激自己的兄长振作起来成为了尼沙雅永恒的烦恼。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--6-->
+                                    <div>
+                                        <div class="kyz_name kyz_name6"></div>
+                                        <div class="kyz_left">
+                                            <img src="images/kyz/kyz_people6.png"/>
+                                            <a href="#" class="more" title="更多详情"></a>
+                                        </div>
+                                        <div class="kyz_right">
+                                            <h3>背景故事</h3>
+                                            <div class="mt_15">
+                                                <p>碎牙众作为忍者众在乱世之中靠支持地方大名势力来生存。所支持的势力被来曙光之王的军队击破后，碎牙众转入地下，变成令人闻风丧胆的暗杀集团。只要有钱和门路就能通过他们收买人命。</p>
+                                                <p>碎牙众中的佼佼者碎牙娜美，精通渗透和刺杀的技术，经常进行一些“阴暗”的工作。接受了刺杀势力强大的军阀领袖狗狼的工作，却败于对方召唤出来的强大使魔。因为行动失败而遭到碎牙众放逐。</p>
+                                                <p>九死一生的碎牙娜美遇到了名为杜库斯的人偶，获得了刻印成为曙光世界的刻印者。获得了力量的娜美代表了曙光世界中的反叛和分裂，在尸山血海中过着跌宕起伏的人生。</p>
+                                            </div>
+                                            <h3 class="mt_15">能力评价</h3>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">伤害能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">辅助能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">存活能力</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="mt_15 star_box">
+                                                <div class="star_box_left">上手难度</div>
+                                                <div class="star_box_right">
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span class="cur"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box_bottom"></div>
+                        </div>
+                    </div>
+                    <!--page8-->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="common_box">
+                            <div class="title title8"></div>
+                            <div class="dot_hr"></div>
+                            <div class="box_top"></div>
+                            <div class="box_content q_text">
+                                <p>纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公，告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告，内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文，字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容。</p>
+                                <p>纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公，告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告，内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文，字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容。</p>
+                                <p>纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公，告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告，内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文，字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容。</p>
+                                <p>纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公，告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告，内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文，字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容。</p>
+                                <p>纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公，告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告，内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文，字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容。</p>
+                                <p>纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公，告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告，内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文，字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容。</p>
+                                <p>纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公，告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告，内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文，字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容纯文字公告内容。</p>
+                            </div>
+                            <div class="box_bottom"></div>
+                            <a href="#" class="more" title="更多详情"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="cooperation_logo"></div>
+            <div class="copyright">
+                <p>久游网全球版权所有，侵权必究 </p>
+                <p>中华人民共和国出版许可号：新广出审[2017]2615号</p>
+                <p>软件著作权号：软著登字第1374851号</p>
+                <p>网络文化经营许可证：沪网文[2017]5775-454 </p>
+                <p>© SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+                <p>联系方式：021-80171199 公司地址：上海市虹口区高阳路109号</p>
+            </div>
+        </div>
+    </div>
+    <div class="common_model wait_soon" style="display: none;">
+        <div class="wait_soon_box">
+            <a href="javascript:;" class="close-btn1"></a>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>

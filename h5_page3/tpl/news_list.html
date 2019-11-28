@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>红莲之王-移动端官网</title>
+    <!--禁止了把数字转化为拨号链接-->
+    <meta name="format-detection" content="telephone=no">
+    <!--删除默认的苹果工具栏和菜单栏-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--控制状态栏显示样式-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/h5_reset.css"/>
+    <link rel="stylesheet" href="../css/h5_globe.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/fastclick.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        $(function(){
+            /*字号rem尺寸变化代码 750的设计稿  比例1:100*/
+            $(window).load(function(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px'
+            });
+            $(window).resize(function(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px'
+            });
+        });
+    </script>
+    <style>
+        /*这段css只能在新闻详情页中用，引用其他页面布局紊乱*/
+        html,body,.page{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--Common Fixed Bar-->
+<div class="topBar">
+    <a href="../index.html" class="t_logo"></a>
+    <div class="top_text">
+        <h3>红莲之王精英测试</h3>
+        <p>1月17日开启</p>
+    </div>
+    <div class="menu">
+        <ul class="menu_list" style="display: none;">
+            <li><a href="http://au.9you.com">资料站</a></li>
+            <li><a href="news_item.html">新闻中心</a></li>
+            <li><a href="../index.html#video_link">游戏特色</a></li>
+            <li><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+</div>
+<!--Common Fixed Bar END-->
+<div class="page">
+    <div class="news_list_pages">
+        <div class="page_header">
+            <h3>资讯详情</h3>
+            <a href="news_item.html" class="back_page">&lt;返回列表</a>
+        </div>
+        <div class="list_container">
+            <h3 class="list_title">给大家带来一首你还要我怎样</h3>
+            <p>你停在了这条我们熟悉的街</p>
+            <p>把你准备好的台词全念一遍</p>
+            <p>我还在逞强 说着谎</p>
+            <p>也没能力遮挡 你去的方向</p>
+            <p>至少分开的时候我落落大方</p>
+            <p>我后来都会选择绕过那条街</p>
+            <p>又多希望在另一条街能遇见</p>
+            <p>思念在逞强 不肯忘</p>
+            <p>怪我没能力跟随 你去的方向 若越爱越被动 越要落落大方 你还要我怎样 要怎样 你突然来的短信就够我悲伤 我没能力遗忘 你不用提醒我 哪怕结局就这样</p>
+            <img src="../images/figure.jpg"/>
+            <p>我还能怎样 能怎样</p>
+            <p>最后还不是落得情人的立场</p>
+            <p>你从来不会想 我何必这样</p>
+            <p>我慢慢的回到自己的生活圈</p>
+            <p>也开始可以接触新的人选</p>
+            <p>爱你到最后 不痛不痒</p>
+            <p>留言在计较 谁爱过一场</p>
+            <p>我剩下一张 没后悔的模样</p>
+        </div>
+        <a href="javascript:;" class="top_btn list_top_btn"></a>
+    </div>
+</div>
+</body>
+</html>

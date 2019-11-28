@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>红莲之王-移动端官网</title>
+    <!--禁止了把数字转化为拨号链接-->
+    <meta name="format-detection" content="telephone=no">
+    <!--删除默认的苹果工具栏和菜单栏-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--控制状态栏显示样式-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/h5_reset.css"/>
+    <link rel="stylesheet" href="css/h5_globe.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(function(){
+            /*字号rem尺寸变化代码 750的设计稿  比例1:100*/
+            $(window).load(function(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px'
+            });
+            $(window).resize(function(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px'
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--Common Fixed Bar-->
+    <div class="topBar">
+        <a href="index.html" class="t_logo"></a>
+        <div class="top_text">
+            <h3>红莲之王涅槃首测</h3>
+            <p>距首测开启还有00天</p>
+        </div>
+        <div class="menu">
+            <ul class="menu_list" style="display: none;">
+                <li><a href="">前往官网</a></li>
+                <li><a href="">立即注册</a></li>
+                <li><a href="#floor1">卡牌与MOBA</a></li>
+                <li><a href="#floor2">卡牌与卡组</a></li>
+                <li><a href="#floor3">胜利的秘诀</a></li>
+                <li><a href="#floor4">刻印者</a></li>
+                <li><a href="#floor5">使魔</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Common Fixed Bar END-->
+    <div class="page">
+        <div class="m_header">
+            <a href="" class="go_center"></a>
+            <a href="" class="register_btn"></a>
+            <a href="javascript:;" class="down_move"></a>
+        </div>
+        <div class="floor1" id="floor1">
+            <a href="" class="see_more see_more1"></a>
+            <a href="" class="see_more see_more2"></a>
+            <a href="" class="see_more see_more3"></a>
+        </div>
+        <div class="floor2" id="floor2"></div>
+        <div class="floor3" id="floor3"></div>
+        <div class="floor4">
+            <div class="floor4_box1" id="floor4">
+                <ul class="fl4_list">
+                    <li class="list1 active"></li>
+                    <li class="list2"></li>
+                    <li class="list3"></li>
+                    <li class="list4"></li>
+                    <li class="list5"><a href="#"></a></li>
+                </ul>
+                <div class="list_content">
+                    <div style="display: block">
+                        <img class="hero" src="images/hero1.png" />
+                        <div class="hero_name">
+                            <h3>埃尔德里克</h3>
+                            <p>
+                                CV:中村悠一
+                                <i class="play_btn"></i>
+                                <audio class="audio_play" src="src/1.wav" preload="auto" controls="controls"></audio>
+                            </p>
+                        </div>
+                        <div class="text1_bg">
+                            <p>埃尔德里克是阿巴里西亚统一王国的王子，是红莲之瞳的拥有者。按王室的惯例，刚出生那天就被弄瞎了右眼，但是拥有最纯正红莲血脉的他，双目皆是血红，就算失去了一只眼睛，也一样拥有“红莲战士”的力量，可以自由地操纵使魔。 “红莲战士”这个称谓理所当然让人联想起骁勇肃穆的勇士形象，可埃尔德里克性格上却是天然的厨二又天真，好在180的身高和满身重装铠甲给他平添几分健壮，怎么说呢，唯一符合“红莲战士”形象的，估计就是他与生俱来的正义感了。 对于自己拥有的异能，埃尔德里克一点儿也没觉得有什么了不起，他把这种力量仅仅当做是“那种东西”来看待，为了探求异能的本质，更好地掌控自己，埃尔德里克开始游历诸国，在这期间他知道了这世界上有名唤“刻印者”的生命存在着，于是在命运的引导下，埃尔德里克向刻印战场进发。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="hero" src="images/hero2.png" />
+                        <div class="hero_name">
+                            <h3>焰华</h3>
+                            <p>
+                                CV:加藤 英美里
+                                <i class="play_btn"></i>
+                                <audio class="audio_play" src="src/4.wav" preload="auto" controls="controls"></audio>
+                            </p>
+                        </div>
+                        <div class="text1_bg">
+                            <p>焰华虽然看起来只是一个普通高中女生，但她其实是以人造阿卡纳为生命根源，有着与红莲之王相似力量的“红莲公主”。 她出生于黄昏世界的安全装置。伴随重大责任而出生并被养育成人的她，性格上却稍稍有些懒散悠闲，人缘也非常好。 在自身成长的同时，说出了“想要成为偶像”这样非常符合黄昏世界文化的话，而且事实上她也确实成为了一名偶像。 她非常热爱黄昏世界，只要她还存在，黄昏世界就将得以维持。在充分理解自己被创造出来的目的，以及自身的能力的情况下，她成了享乐主义的体质。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="hero" src="images/hero3.png" />
+                        <div class="hero_name">
+                            <h3>琉克蕾斯</h3>
+                            <p>
+                                CV:早见 沙织
+                                <i class="play_btn"></i>
+                                <audio class="audio_play" src="src/2.wav" preload="auto" controls="controls"></audio>
+                            </p>
+                        </div>
+                        <div class="text1_bg">
+                            <p>阿鲁卡乌斯王国是红莲世界被刻印战争毁灭的无数伟大帝国之一，昔日的荣光如今已是纷纷灰尘。 然而阿鲁卡乌斯的大公主还活着。 埋葬了两个多世纪的尸身意外被赋予刻印之力，在灵庙中复活。在黑暗的坟墓呆了太久，琉克蕾斯的皮肤看起来比她曾经在世时还要苍白，纸片一样映出淡蓝色的血管。及腰的金色长发也不如从前那样明媚，转而淡得发白。身上那件镶嵌金边和钻石的名贵长裙如今已伤痕累累，倒是手中的法杖看上去一点儿没变，就像200多年前她刚刚从父王那儿接受它时那么新。 和父王及兄长的重逢在过去是，在如今仍是琉克蕾斯唯一的愿望，已经掌握了刻印之力的她，一边缜密地召集和部署不死军团，一边狂热等待着父兄从促成阿鲁卡乌斯灭亡的最后一场大战中凯旋归来。 如果撩起她遮住面颊的长发，可以看到她的刻印占据了几乎一半的脸，像一个邪恶的诅咒一般衬托着琉克蕾斯看起来不过20岁的清秀面容，散发出一丝丝不祥的气息。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="hero" src="images/hero4.png" />
+                        <div class="hero_name">
+                            <h3>响时生</h3>
+                            <p>
+                                CV:冈本 信彦
+                                <i class="play_btn"></i>
+                                <audio class="audio_play" src="src/3.wav" preload="auto" controls="controls"></audio>
+                            </p>
+                        </div>
+                        <div class="text1_bg">
+                            <p>响时生是个普通的17岁少年，现读私立燐光学园2年级。 出生于黄昏世界的他住在普通街道的普通住宅里，父母健在，有个弟弟，生活平凡而幸福。性格上明朗快活，在被选中成为刻印者之前，愉快地过着没有任何迷惘的生活。 不过你从来不会觉得他有什么肤浅——他喜欢运动，总是一副元气满满的姿态，黑色的短发搭配中等身材看上去没什么特别，可是在两者中间时常会浮现的明朗笑脸真是叫人看到就喜欢。 以这幅大大咧咧的态度生活着的他按理说是根本无法被名门院校：私立燐光学园录取的，但也许就是傻人有傻福，凭借自己在田径上的特长，不知怎么就溜进去了。在学校里，性格开朗善于交际的时生很快成为了最受欢迎的人。他喜欢上同班同学真宙，却不知如何表达。 和其他男孩一样，时生对军事方面很感兴趣，对刻印战争也抱有很大的关注，但他被选中完全是命运随便掷了个骰子。反正，刻印从右手的最中心蔓延开来，而从这以后，他就要开始思考以前从没想过的问题了。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floor4_box2" id="floor5">
+                <ul class="fl4_item">
+                    <li class="item1 active"></li>
+                    <li class="item2"></li>
+                    <li class="item3"></li>
+                    <li class="item4"><a href="#"></a></li>
+                </ul>
+                <div class="item_content">
+                    <div style="display: block;">
+                        <img class="card" src="images/card1.png" />
+                        <div class="card_name">
+                            <h3>所罗门王</h3>
+                            <p>
+                                CV:矢作 紗友里
+                                <i class="play_btn"></i>
+                                <audio class="audio_play" src="src/5.wav" preload="auto" controls="controls"></audio>
+                            </p>
+                        </div>
+                        <div class="text2_bg">
+                            <p>能自由支配即使在地狱也很有名的七十二柱恶魔，从神那里得到“秘密之书”而获得无数知识，有着很强个人魅力的王喵……这些所说的真的是这个家伙吗？ 看起来就只是个小孩子，与其说是个人魅力，倒不如说是在和恶魔们玩耍一样……但是，如果她的力量能唤起那么多的恶魔本不该有的感情的话，那她可能真的是一个了不起的王喵。 但是…这是怎么回事喵？我在看到这个家伙的时候，也好像要想起什么一样，胸口一阵躁动喵。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="card" src="images/card1.png" />
+                        <div class="card_name">
+                            <h3>天津瓮星</h3>
+                            <p>
+                                CV:山本 和臣
+                                <i class="play_btn"></i>
+                                <audio class="audio_play" src="src/6.wav" preload="auto" controls="controls"></audio>
+                            </p>
+                        </div>
+                        <div class="text2_bg">
+                            <p>他是众神时代东征高天原时的天津神的背叛者。手持豪斧·慧明，立于国津神一方的妖星神。 从前，天津和国津之间的战斗力相差甚远。他以弱势一方为友，直到最后也没有屈膝，用尽全身力气进行了激烈的反抗……这么听来，你可能会觉得他是一个充满侠义之心的神，但实际上他象征的是无关日月运行，永远光辉的异端之星——金星。 反骨、顽固、执迷不悟的他，绝不会为了胜利去攀附强者。 如同为了证明他的性格一样，他的外貌还是一个年轻的神。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="card" src="images/card1.png" />
+                        <div class="card_name">
+                            <h3>巴御前</h3>
+                            <p>
+                                CV:中川 亜紀子
+                                <i class="play_btn"></i>
+                                <audio class="audio_play" src="src/7.wav" preload="auto" controls="controls"></audio>
+                            </p>
+                        </div>
+                        <div class="text2_bg">
+                            <p>支持着欲夺取天下的最爱之人的女武者。她拥有着被称为“一人当千的兵者”程度的刚力，能将敌将从马上拖下，徒手把他们的脖子拧断。 遗憾的是她的爱人战败了，只有她失魂落魄地逃到东方。她只听从已故的思念着的人的灵魂所变成的灵猫“玉丸”，挥舞着长刀的姿态，让人悲哀的同时也很美丽，非常能打动人心。 即使孤身一人在战场上驰骋，也是一股十分强大的战斗力。与之为敌是非常可怕的，但如果成为伙伴的话是个可靠使魔的典型。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floor5">
+            <a href="" class="go_center go_center1"></a>
+            <a href="" class="register_btn1"></a>
+        </div>
+        <div class="footer">
+            <div class="cooperation_logo"></div>
+            <div class="copyright">
+                <p>久游网全球版权所有，侵权必究 </p>
+                <p>中华人民共和国出版许可号：新广出审[2017]2615号</p>
+                <p>软件著作权号：软著登字第1374851号</p>
+                <p>网络文化经营许可证：沪网文[2017]5775-454 </p>
+                <p>© SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+                <p>联系方式：021-80171199 公司地址：上海市虹口区高阳路109号</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

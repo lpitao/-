@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>飞火壁纸合作页面</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="out-div">
+		<div class="page-1 pages">
+			<p class="time">活动时间：12月24日-12月31日 </p>
+			<a href="javascript:;" class="down"></a>
+			<div class="btn_bg">
+				<a href="#" title="下载飞火壁纸"></a>
+			</div>
+		</div>
+		<div class="page-2 pages">
+			<p class="time1">*12月24日-12月31日*</p>
+			<p class="tips">活动期间，<a href="#">下载飞火壁纸</a>客户端并前往红莲之王专区即可领取</p>
+			<div class="pic1">
+				<img src="images/pic1.png">
+			</div>
+			<div class="pic2">
+				<img src="images/pic2.png">
+			</div>
+			<a href="javascript:;" class="down"></a>
+		</div>
+		<div class="page-3 pages">
+			<div id="carousel">
+		        <img src="images/wallpaper1.png">
+		        <img src="images/wallpaper2.png">
+		        <img src="images/wallpaper3.png">
+		    </div>
+			<div class="pic1">
+				<img src="images/pic1.png">
+			</div>
+			<div class="pic2">
+				<img src="images/pic2.png">
+			</div>
+			<a href="#" class="icon_load"></a>
+		</div>
+		<div class="footer">
+            <div class="remind">
+                <p class="remind_title">健康游戏公告</p>
+                <p>抵制不良游戏 ` 拒绝盗版游戏 ` 注意自我保护 ` 谨防受骗上当 ` 适度游戏益脑 ` 沉迷游戏伤身 ` 合理安排时间 ` 享受健康生活</p>
+            </div>
+            <div class="cooperation_logo"></div>
+            <div class="copyright">
+                <p>久游网全球版权所有，侵权必究 </p>
+                <p>中华人民共和国出版许可号：新广出审[2017]2615号 | 软件著作权号：软著登字第1374851号 | 网络文化经营许可证：沪网文[2017]5775-454 </p>
+                <p>© SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+                <p>联系方式：021-80171199 公司地址：上海市虹口区高阳路109号</p>
+            </div>
+        </div>
+
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/Carousel.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$(function(){
+			var positionX = 0;
+    		var positionY = 0;
+			$('.pages').mousemove(function(e){
+				var x = e.clientX, y = e.clientY;
+				if(positionX === 0 && positionY === 0){
+		            positionX = x;
+		            positionY = y;
+		        }
+		        if(x > positionX && y < positionY){
+		            $('.pic1').stop().animate({'right':240,'top':20},'800',"easeOutCubic");
+		            $('.pic2').stop().animate({'left':85,'bottom':20},'800',"easeOutCubic");
+		            positionX = x;
+		            positionY = y;
+		        }else if(x > positionX && y > positionY){
+		            $('.pic1').stop().animate({'right':200,'top':20},'800',"easeOutCubic");
+		            $('.pic2').stop().animate({'left':45,'bottom':20},'800',"easeOutCubic");
+		            positionX = x;
+		            positionY = y;
+		        }else if(x < positionX && y < positionY){
+		            $('.pic1').stop().animate({'right':240,'top':20},'800',"easeOutCubic");
+		            $('.pic2').stop().animate({'left':85,'bottom':20},'800',"easeOutCubic");
+		            positionX = x;
+		            positionY = y;
+		        }else if(x < positionX && y > positionY){
+		            $('.pic1').stop().animate({'right':200,'top':20},'800',"easeOutCubic");
+		            $('.pic2').stop().animate({'left':45,'bottom':20},'800',"easeOutCubic");
+		            positionY = y;
+		        }
+			});
+			$.extend($.easing,{
+		        easeOutBack:function(x,t,b,c,d,s){
+		            if (s == undefined) s = 1.70158;
+		            return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+		        },
+		        easeOutCubic: function (x, t, b, c, d) {
+		            return c * ((t = t / d - 1) * t * t + 1) + b;
+		        }
+		    });
+		    $('#carousel').carousel({curDisplay: 0, autoPlay: true, interval: 3000});
+		});
+	</script>
+</body>
+
+</html>

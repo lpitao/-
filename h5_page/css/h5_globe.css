@@ -1,0 +1,414 @@
+/*Common Fixed Bar*/
+.topBar{
+    width: 100%;
+    padding: 0 5%;
+    height: 1.08rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    color: #caa749;
+    background: rgba(33,28,28,.9);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5211c1c,endColorstr=#E5211c1c);
+}
+.t_logo{
+    float: left;
+    margin-top:.11rem;
+    width: 1.05rem;
+    height: 0.95rem;
+    background: url('../images/top_logo.png') 0 0 no-repeat;
+    background-size:cover;
+}
+.top_text{
+    float: left;
+    margin-left: 0.1rem;
+    margin-top: 0.14rem;
+    color: #caa749;
+}
+.top_text h3{
+    font-size: .26rem;
+    line-height: .4rem;
+}
+.top_text p{
+    font-size: .2rem;
+    line-height: .31rem;
+}
+.menu{
+    position: relative;
+    float: right;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-top: 0.21rem;
+    background: url('../images/menu.png') no-repeat;
+    background-size:cover;
+}
+.menu.active{
+    background: url('../images/menu_active.png') no-repeat;
+    background-size:cover;
+}
+.menu ul{
+    position: absolute;
+    top:.86rem;
+    right: 0;
+    width:2.28rem;
+    border-top: 1px solid #caa749;
+    border-left: 1px solid #caa749;
+    background: rgba(0,0,0,.6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+}
+.menu ul li{
+    height: 0.9rem;
+    line-height: 0.9rem;
+    text-align: center;
+    border-bottom: 1px solid #caa749;
+    border-right: 1px solid #caa749;
+}
+.menu ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #caa749;
+    font-size: 0.36rem;
+}
+/*Common Fixed Bar END*/
+.m_header{
+    width: 100%;
+    height: 13.29rem;
+    position: relative;
+    background: url("../images/m_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.go_center{
+    position: absolute;
+    bottom:0.86rem;
+    left: 50%;
+    margin-left: -2.65rem;
+    width: 2.36rem;
+    height: 0.74rem;
+    background: url("../images/go_center.jpg") no-repeat center/cover;
+}
+.register_btn{
+    position: absolute;
+    bottom:0.86rem;
+    left: 50%;
+    margin-left:.27rem;
+    width: 2.36rem;
+    height: 0.74rem;
+    background: url("../images/register_btn.jpg") no-repeat center/cover;
+}
+.down_move{
+    position: absolute;
+    left: 50%;
+    bottom:0.15rem;
+    margin-left: -0.21rem;
+    width: 0.42rem;
+    height: 0.61rem;
+    -webkit-animation: downBtn 1s linear infinite;
+    animation: downBtn 1s linear infinite;
+    background: url("../images/down.png") no-repeat center/cover;
+}
+@keyframes downBtn{
+    0%{
+        bottom:0.15rem;
+        opacity: .6;
+    }
+    30%{
+        bottom:0.2rem;
+        opacity:.2;
+    }
+    100%{
+        bottom:0.15rem;
+        opacity: .6;
+    }
+}
+@-webkit-keyframes downBtn{
+    0%{
+        bottom:0.15rem;
+        opacity: .6;
+    }
+    30%{
+        bottom:0;
+        opacity:.2;
+    }
+    100%{
+        bottom:0.15rem;
+        opacity: .6;
+    }
+}
+.footer{
+    margin: 0 auto;
+    font-size: 0.24rem;
+    color: #747474;
+    padding: 0.3rem 0 0.5rem;
+    text-align: center;
+    background: #000000;
+}
+.cooperation_logo{
+    width: 5.99rem;
+    height: 0.77rem;
+    margin:0 auto 0.1rem;
+    background: url("../images/copyright_logo.png") no-repeat center/cover;
+}
+.floor1{
+    width: 100%;
+    height: 13.48rem;
+    position: relative;
+    background: url("../images/floor1.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.see_more{
+    position: absolute;
+    left: 50%;
+    margin-left: .32rem;
+    width: 2.36rem;
+    height: 0.74rem;
+    background: url("../images/see_more.jpg") no-repeat center/cover;
+}
+.see_more1{
+    top:4.25rem;
+}
+.see_more2{
+    top:8.42rem;
+}
+.see_more3{
+    top:12.3rem;
+}
+.floor2{
+    width: 100%;
+    height: 24.37rem;
+    position: relative;
+    background: url("../images/floor2.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.floor3{
+    width: 100%;
+    height: 24.37rem;
+    position: relative;
+    background: url("../images/floor3.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.floor4{
+    width: 100%;
+    overflow: hidden;
+}
+.floor4_box1{
+    width: 100%;
+    height: 9.61rem;
+    position: relative;
+    background: url("../images/floor4_box1.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.fl4_list{
+    width: 7.23rem;
+    position: absolute;
+    top:8.2rem;
+    left:.14rem;
+}
+.fl4_list li{
+    float: left;
+    width: 1.23rem;
+    height: 1.23rem;
+    margin-right: .27rem;
+    opacity: .6;
+}
+.fl4_list li.active{
+    opacity: 1;
+}
+.fl4_list li:last-child{
+    margin-right: 0 !important;
+}
+.fl4_list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.list1{
+    background: url("../images/list1.png") no-repeat center/cover;
+}
+.list2{
+    background: url("../images/list2.png") no-repeat center/cover;
+}
+.list3{
+    background: url("../images/list3.png") no-repeat center/cover;
+}
+.list4{
+    background: url("../images/list4.png") no-repeat center/cover;
+}
+.list5{
+    background: url("../images/list5.png") no-repeat center/cover;
+}
+.list_content{
+    position: absolute;
+    bottom: 1.53rem;
+    left: 0;
+    width: 100%;
+}
+.list_content>div{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 6.31rem;
+    display: none;
+}
+.hero{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+    width: 5.72rem;
+    height: 6.31rem;
+}
+.hero_name{
+    position: absolute;
+    top:.55rem;
+    left: 2.9rem;
+    z-index:10;
+}
+.hero_name h3{
+    color: #fff;
+    font-size: .5rem;
+    font-weight: bold;
+}
+.hero_name p{
+    color: #7efaff;
+    font-size: .34rem;
+    font-weight: bold;
+    position: relative;
+}
+.play_btn{
+    position: relative;
+    display: inline-block;
+    width: .47rem;
+    height: .43rem;
+    top:.1rem;
+    background: url("../images/play_btn.png") no-repeat center/cover;
+}
+.text1_bg{
+    position: absolute;
+    z-index: 5;
+    width: 4.67rem;
+    height: 4.26rem;
+    top:1.58rem;
+    left: 2.65rem;
+    overflow: auto;
+    padding: .25rem .20rem;
+    font-size: .18rem;
+    color: #fff;
+    background: url("../images/text1_bg.png") no-repeat center/cover;
+}
+.audio_play{
+    position: absolute;
+    z-index: 12;
+    visibility: hidden;
+}
+.floor4_box2{
+    width: 100%;
+    height: 9.83rem;
+    position: relative;
+    background: url("../images/floor4_box2.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.fl4_item{
+    width: 5.73rem;
+    position: absolute;
+    top: 8.44rem;
+    left: .9rem;
+}
+.fl4_item li{
+    float: left;
+    width: 1.23rem;
+    height: 1.23rem;
+    margin-right: .27rem;
+    opacity: .6;
+}
+.fl4_item li:last-child{
+    margin-right: 0 !important;
+}
+.fl4_item li.active{
+    opacity: 1;
+}
+.item1{
+    background: url("../images/item1.png") no-repeat center/cover;
+}
+.item2{
+    background: url("../images/item2.png") no-repeat center/cover;
+}
+.item3{
+    background: url("../images/item3.png") no-repeat center/cover;
+}
+.item4{
+    background: url("../images/item4.png") no-repeat center/cover;
+}
+.item_content{
+    position: absolute;
+    top: 2.02rem;
+    left: 0;
+    width: 100%;
+}
+.item_content>div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6.3rem;
+    display: none;
+}
+.card{
+    position: absolute;
+    top:.65rem;
+    left: 4.05rem;
+    z-index: 1;
+    height: 4.74rem;
+    width: 3rem;
+    transform: rotate(15deg);
+}
+.card_name{
+    position: absolute;
+    top: 4.55rem;
+    left: .25rem;
+    z-index: 10;
+}
+.card_name h3 {
+    color: #fff;
+    font-size: .5rem;
+    font-weight: bold;
+}
+.card_name p {
+    color: #7efaff;
+    font-size: .34rem;
+    font-weight: bold;
+    position: relative;
+}
+.text2_bg{
+    position: absolute;
+    z-index: 5;
+    width: 4.67rem;
+    height: 4.26rem;
+    top: 0;
+    left: .07rem;
+    overflow: auto;
+    padding: .25rem .20rem;
+    font-size: .18rem;
+    color: #fff;
+    background: url("../images/text1_bg.png") no-repeat center/cover;
+}
+.floor5{
+    width: 100%;
+    height: 9.83rem;
+    position: relative;
+    background: url("../images/floor5.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.go_center1{
+    top:6.7rem !important;
+}
+.register_btn1{
+    position: absolute;
+    top: 6.7rem;
+    left: 50%;
+    margin-left: .27rem;
+    width: 2.36rem;
+    height: 0.74rem;
+    background: url("../images/register_btn1.jpg") no-repeat center/cover;
+}

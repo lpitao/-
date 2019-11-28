@@ -1,0 +1,296 @@
+.header {
+    width: 100%;
+    height: 8.03rem;
+    background: url("../images/header.jpg") 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.header_tips{
+    position: absolute;
+    top:5.65rem;
+    left: .2rem;
+    font-size: .22rem;
+    font-weight: bold;
+    color: #fff;
+}
+.header>a{
+    position: absolute;
+    top:6.66rem;
+    left:2.14rem;
+    width: 3.16rem;
+    height: .85rem;
+}
+.sign_btn{
+    background: url("../images/sign_btn.png") no-repeat center/cover;
+}
+.cancel_btn{
+    background: url("../images/cancel_btn.png") no-repeat center/cover;
+}
+.step1{
+    width: 100%;
+    height: 10rem;
+    background: url("../images/step1.jpg") 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.main_btn{
+    margin: 0 auto;
+    width: 4.47rem;
+    height: 2.09rem;
+    background: url("../images/main_btn_bg.png") no-repeat center/cover;
+    font-size: .22rem;
+    font-weight: bold;
+    color: #ff5065;
+    text-align: center;
+}
+.main_btn_text{
+    padding-top: .25rem;
+}
+.main_btn a{
+    display: block;
+    width: 3.16rem;
+    height: .85rem;
+    margin: .05rem auto 0;
+}
+.appraisal_btn a{
+    background: url("../images/appraisal_btn.png") no-repeat center/cover;
+}
+.receive_btn a{
+    background: url("../images/receive_btn.png") no-repeat center/cover;
+}
+.text_list{
+    margin:.3rem auto 0;
+    width: 7.1rem;
+    overflow: hidden;
+    font-size: .22rem;
+    font-weight: bold;
+    color: #ff5065;
+}
+.text_list li{
+    float: left;
+    width: 3.44rem;
+    height: 3.46rem;
+    position: relative;
+    background: url("../images/li_bg.png") no-repeat center/cover;
+}
+.text_list li h3{
+    margin-top: .66rem;
+    margin-left: .6rem;
+    font-size: .28rem;
+    font-weight: bold;
+    color: #fff;
+    height: .49rem;
+    width: 1.58rem;
+    line-height: .49rem;
+}
+.text_list li p{
+    margin-top: 0.1rem;
+    margin-left: .6rem;
+    width: 2.3rem;
+    height: 1.6rem;
+    overflow: hidden;
+}
+.go_join{
+    position: absolute;
+    top:2.72rem ;
+    left: .78rem;
+    display: block;
+    width:1.79rem;
+    height: .48rem;
+    background: url("../images/go_join.png") no-repeat center/cover;
+}
+.step2{
+    width: 100%;
+    height: 12.88rem;
+    background: url("../images/step2.jpg") 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.reward_list{
+    position: absolute;
+    top: 5.25rem;
+    left: .2rem;
+    font-size: .22rem;
+    color: #ff5065;
+    font-weight: bold;
+}
+.reward_list li{
+    overflow: hidden;
+    margin-bottom: .24rem;
+}
+.reward_list li>div {
+    float: left;
+    text-align: center;
+}
+.reward_list1{
+    width: 1.97rem;
+    height: .47rem;
+    line-height: .47rem;
+    margin-top: .19rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.reward_list2{
+    margin-left:.07rem;
+    width: 5.06rem;
+}
+.reward_list2 p{
+    height: .42rem;
+    line-height: .42rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.common_model{
+    position: absolute;
+    width: 7.12rem;
+    left: 50%;
+    top: 25%;
+    margin-left: -3.56rem;
+}
+.model_title{
+    width: 7.12rem;
+    height: 1.8rem;
+    background: url("../images/model_title.png") no-repeat center/cover;
+}
+.model_content{
+    padding: .3rem .8rem;
+    width: 7.12rem;
+    background: #fff;
+    min-height: 2rem;
+    -webkit-border-bottom-left-radius: .4rem;
+    border-bottom-left-radius: .4rem;
+    -webkit-border-bottom-right-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+}
+.model_text{
+    text-align: center;
+    font-size: .24rem;
+    font-weight: bold;
+    color: #ff5065;
+    line-height: 160%;
+}
+.model_btn{
+    width: 3.16rem;
+    height: .85rem;
+    display: block;
+    margin:.3rem auto 0;
+}
+.receive1{
+    background: url("../images/receive_btn.png") no-repeat center/cover;
+}
+.sign_model{
+    position: absolute;
+    width: 7.12rem;
+    left: 50%;
+    top: 20%;
+    margin-left: -3.56rem;
+    background: #fff;
+    color: #333333;
+}
+.sign_title{
+    height: .85rem;
+    line-height: .85rem;
+    text-align: center;
+    font-size: .4rem;
+    font-weight: bold;
+}
+.sign_mess{
+    margin-top: .3rem;
+    font-size: .24rem;
+}
+.sign_mess label{
+    display: block;
+    overflow: hidden;
+    margin-bottom: .3rem;
+}
+.sign_mess label span,.sign_mess label input,.sign_mess label a{
+    float: left;
+    height: .6rem;
+    line-height: .6rem;
+}
+.sign_mess label span{
+    width: 1.55rem;
+    text-align: right;
+    margin-right: .15rem;
+}
+.sign_mess label input{
+    width: 5rem;
+    border:1px solid #999999;
+    outline: none;
+    padding-left: .2rem;
+    font-size: .22rem;
+}
+.write_mess{
+    width: 2.08rem !important;
+}
+.phone_send{
+    width: 2.81rem;
+    text-align: center;
+    color: #ffffff;
+    background: #999999;
+    margin-left:.12rem;
+}
+.channel_sign{
+    overflow: hidden;
+    height: .6rem;
+    line-height: .6rem;
+    margin-bottom: .5rem;
+}
+.channel_sign span{
+    float: left;
+    width: 1.55rem;
+    text-align: right;
+    margin-right: .15rem;
+}
+.channel_link{
+    float: left;
+    height: .6rem;
+    width: 5rem;
+    text-align: center;
+}
+.channel_link a{
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    margin-right:.4rem;
+}
+.channel_link a:last-child{
+    margin-right: 0 !important;
+}
+.icon_qq{
+    background: url("../images/icon1.png") no-repeat center/cover;
+}
+.icon_sw{
+    background: url("../images/icon2.png") no-repeat center/cover;
+}
+.icon_fly{
+    background: url("../images/icon3.png") no-repeat center/cover;
+}
+.icon_4399{
+    background: url("../images/icon4.png") no-repeat center/cover;
+}
+.icon_yi{
+    background: url("../images/icon5.png") no-repeat center/cover;
+}
+.sign_btn{
+    overflow: hidden;
+}
+.sign_btn a{
+    float: left;
+    height: .82rem;
+    line-height: .82rem;
+    text-align: center;
+    color: #fff;
+    font-size: .4rem;
+    font-weight: bold;
+}
+.sign_box_cancel{
+    width: 2.69rem;
+    background: #999999;
+}
+.sign_box_main_btn{
+    width: 4.43rem;
+    background: #FF5065;
+}

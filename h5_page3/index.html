@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>红莲之王-移动端官网</title>
+    <!--禁止了把数字转化为拨号链接-->
+    <meta name="format-detection" content="telephone=no">
+    <!--删除默认的苹果工具栏和菜单栏-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--控制状态栏显示样式-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/h5_reset.css"/>
+    <link rel="stylesheet" href="css/h5_globe.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.event.drag-1.5.min.js"></script>
+    <script src="js/jquery.touchSlider.js"></script>
+    <script src="js/app_swiper.js"></script>
+    <script src="js/list_move.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/vendors/jquery.touchSwipe.min.js"></script>
+    <script src="js/bpHS.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(function(){
+            /*字号rem尺寸变化代码 750的设计稿  比例1:100*/
+            $(window).load(function(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px'
+            });
+            $(window).resize(function(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px'
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--Common Fixed Bar-->
+    <div class="topBar">
+        <a href="index.html" class="t_logo"></a>
+        <div class="top_text">
+            <h3>红莲之王精英测试</h3>
+            <p>1月17日开启</p>
+        </div>
+        <div class="menu">
+            <ul class="menu_list" style="display: none;">
+                <li><a href="http://au.9you.com">资料站</a></li>
+                <li><a href="#apply_btn">新闻中心</a></li>
+                <li><a href="#video_link">游戏特色</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Common Fixed Bar END-->
+    <div class="page">
+        <div class="m_header">
+            <div class="container">
+                <a href="javascript:;" class="logo"></a>
+                <a href="javascript:;" class="video_btn"></a>
+                <a href="tpl/register.html" class="main_zc"></a>
+                <a href="javascript:;" class="apply_btn" id="apply_btn"></a>
+                <a href="tpl/activate.html" class="main_activation"></a>
+                <a href="javascript:;" class="down_move"></a>
+            </div>
+        </div>
+        <div class="new_information">
+            <div class="new_information_head"></div>
+            <div class="main_visual">
+                <ul class="flicking_con"></ul>
+                <div class="main_image">
+                    <ul>
+                        <li><a href="http://baidu.com"><img src="images/banner/1.jpg"/></a></li>
+                        <li><a href="#"><img src="images/banner/2.png"/></a></li>
+                        <li><a href="#"><img src="images/banner/3.jpg"/></a></li>
+                        <li><a href="#"><img src="images/banner/4.png"/></a></li>
+                    </ul>
+                </div>
+                <div class="bar"></div>
+                <a href="javascript:;" id="btn_prev"></a>
+                <a href="javascript:;" id="btn_next"></a>
+            </div>
+            <div class="wrap">
+                <ul class="tabs">
+                    <li class="active">综合</li>
+                    <li>新闻</li>
+                    <li>公告</li>
+                    <li>媒体</li>
+                </ul>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="content-slide">
+                                <ul class="information_items">
+                                    <li>
+                                        <a href="#">
+                                            <div>公告</div>
+                                            <p>目前距离9月20日开始的资格预约，仅剩下三天时间！</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div>公告</div>
+                                            <p>目前距离9月20日开始的资格预约，仅剩下三天时间！</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div>公告</div>
+                                            <p>目前距离9月20日开始的资格预约，仅剩下三天时间！</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div>公告</div>
+                                            <p>目前距离9月20日开始的资格预约，仅剩下三天时间！</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div>公告</div>
+                                            <p>目前距离9月20日开始的资格预约，仅剩下三天时间！</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div>公告</div>
+                                            <p>目前距离9月20日开始的资格预约，仅剩下三天时间！</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="content-slide">
+                                新闻
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="content-slide">
+                                公告
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="content-slide">
+                                媒体
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="tpl/news_item.html" class="information_all"></a>
+        </div>
+        <div class="video_content">
+            <div class="video_btn_head"></div>
+            <a href="javascript:;" class="video_link" id="video_link"></a>
+        </div>
+        <div class="game_character">
+            <div class="game_character_head"></div>
+            <div class="game_character_content">
+                <div class="bp-hs" id="demo-default">
+                    <div class="bp-hs_inner">
+                        <div class="bp-hs_inner__item" data-transform="scale">
+                            <img src="images/card1.png"/>
+                        </div>
+                        <div class="bp-hs_inner__item" data-transform="rotate">
+                            <img src="images/card2.png"/>
+                        </div>
+                        <div class="bp-hs_inner__item" data-transform="rotate">
+                            <img src="images/card3.png"/>
+                        </div>
+                        <div class="bp-hs_inner__item" data-transform="rotate">
+                            <img src="images/card4.png"/>
+                        </div>
+                        <div class="bp-hs_inner__item" data-transform="rotate">
+                            <img src="images/card5.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="concern_content">
+            <div class="concern_head"></div>
+            <div class="concern_in">
+                <div class="wx_ewm">
+                    <img src="images/wx_ewm.png"/>
+                </div>
+                <p class="text_mb">微信中长按可识别二维码</p>
+                <p>关注官方微信号</p>
+                <p>请搜索【lova9you】</p>
+            </div>
+        </div>
+        <div class="main_link_btn">
+            <ul class="external_link">
+                <li class="link_xl"><a href="#"></a></li>
+                <li class="link_qq"><a href="#"></a></li>
+                <li class="official_forum"><a href="#"></a></li>
+                <li class="post_bar"><a href="#"></a></li>
+            </ul>
+            <ul class="inside_link">
+                <li class="pc_home">
+                    <a href="#">
+                        <i></i>
+                        <p>进入电脑版官网</p>
+                    </a>
+                </li>
+                <li class="top_btn main_top_btn">
+                    <a href="javascript:;">
+                        <i></i>
+                        <p>返回顶部</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="cooperation_logo"></div>
+            <div class="copyright">
+                <p>久游网全球版权所有，侵权必究 </p>
+                <p>中华人民共和国出版许可号：新广出审[2017]2615号</p>
+                <p>软件著作权号：软著登字第1374851号</p>
+                <p>网络文化经营许可证：沪网文[2017]5775-454 </p>
+                <p>© SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+                <p>联系方式：021-80171199 公司地址：上海市虹口区高阳路109号</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
